@@ -1,0 +1,25 @@
+{
+  "name": "dpodium/yii2-nexmo",
+  "description": "Yii2 nexmo is a wrapper for the Nexmo PHP library. Allow yii2 application to use nexmo services.",
+  "keywords": ["yii2", "nexmo", "sms"],
+  "type": "yii2-extension",
+  "license": "BSD",
+  "authors": [
+    {
+      "name": "Sionghuat Chng",
+      "email": "sionghuat.chng@dpodium.com",
+      "homepage": "http://www.dpodium.com"
+    }
+  ],
+  "support": {
+    "source": "https://github.com/dpodium/yii2-nexmo",
+    "issues": "https://github.com/dpodium/yii2-nexmo/issues"
+  },
+  "require": {
+    "yiisoft/yii2": "2.0.*",
+    "nexmo/client": "*"
+  },
+  "autoload": {
+    "psr-4": { "dpodium\\yii2\\nexmo\\": "" }
+  }
+}
