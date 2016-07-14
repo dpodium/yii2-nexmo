@@ -15,6 +15,7 @@
     "source": "https://github.com/dpodium/yii2-nexmo",
     "issues": "https://github.com/dpodium/yii2-nexmo/issues"
   },
+  "minimum-stability": "dev-master",
   "require": {
     "yiisoft/yii2": "2.0.*",
     "nexmo/client": "1.0.0-beta2"
