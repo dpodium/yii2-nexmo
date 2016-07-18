@@ -19,6 +19,7 @@
     "yiisoft/yii2": "2.0.*"
   },
   "autoload": {
-    "psr-4": { "dpodium\\yii2\\nexmo\\": "" }
+    "dpodium\\yii2\\nexmo\\components": "",
+    "Nexmo" : "src/"
   }
 }
