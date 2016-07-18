@@ -2,7 +2,6 @@
 
 namespace dpodium\nexmo\components;
 
-
 class Nexmo
 {
     public $config = [];
