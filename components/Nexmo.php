@@ -1,8 +1,8 @@
 <?php
 
-namespace dpodium\nexmo\components;
+namespace dpodium\yii2\Nexmo;
 
-class Nexmo
+class NexmoManager
 {
     public $config = [];
     public $test_mode = true;

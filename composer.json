@@ -21,7 +21,7 @@
   "autoload": {
     "psr-4": {
       "dpodium\\yii2\\Nexmo\\" : "components/",
-      "" : "src/"
+      "Nexmo\\" : "src/"
     }
   }
 }
