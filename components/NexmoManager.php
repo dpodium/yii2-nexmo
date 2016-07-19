@@ -28,7 +28,6 @@ class NexmoManager
 
     protected function initClient()
     {
-        return new \Nexmo\Client(new Nexmo\Credentials\Basic($this->config['api.key'], $this->config['api.secret']));
-
+        return new \Nexmo\Client(new \Nexmo\Client\Credentials\Basic($this->config['api.key'], $this->config['api.secret']));
     }
 }
