@@ -29,7 +29,7 @@ return [
     'components' => [
     ...
         'nexmo' => [
-                   'class' => dpodium\nexmo\components\Nexmo::class,
+                   'class' => dpodium\yii2\Nexmo\NexmoManager::class,
                    'config' => [
                                    'api.key' => API_KEY, //from nexmo
                                    'api.secret' => API_SECRET, //from nexmo
@@ -52,3 +52,24 @@ Usage
 _____
     Sending message
     Yii::$app->nexmo->sendSms(TO, FROM, 'Test Nexmo Message');
+
+    Receiving A Message
+    Yii::$app->nexmo->receiveMessage();
+
+    Fetching A Message
+    Yii::$app->nexmo->fetchMessage(MESSAGE_ID);
+
+    Starting a Verification
+    Yii::$app->nexmo->initVerification(NUMBER, BRAND);
+
+    Controlling a Verification
+    Trigger
+    Yii::$app->nexmo->triggerVerification(REQUEST_ID);
+    Cancel
+    Yii::$app->nexmo->cancelVerification(REQUEST_ID);
+
+    Checking A Verification
+    Yii::$app->nexmo->checkVerification(REQUEST_ID, CODE);
+
+    Searching For A Verification
+    Yii::$app->nexmo->searchVerification(REQUEST_ID);
