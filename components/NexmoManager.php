@@ -5,7 +5,6 @@ namespace dpodium\yii2\Nexmo;
 class NexmoManager
 {
     public $config = [];
-    public $test_mode = true;
     public $proxy = null;
 
     public function sendSms($to, $from, $text, $client_ref = null) {

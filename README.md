@@ -34,8 +34,6 @@ return [
                                    'api.key' => API_KEY, //from nexmo
                                    'api.secret' => API_SECRET, //from nexmo
                                ],
-                   //test or live mode
-                   'test_mode' => true,
                    //leave blank if not applicable
                    'proxy' => [
                                    'host' => HOST,
