@@ -54,8 +54,7 @@ class NexmoManager
     public function initVerification($number, $telco) {
         $client = $this->initClient();
         $verification = new \Nexmo\Verify\Verification($number, $telco);
-        $client->verify()->start($verification);
-        echo "Started verification with an id of: " . $verification->getRequestId();
+        return $client->verify()->start($verification);
     }
 
     /*
@@ -63,13 +62,13 @@ class NexmoManager
      */
     public function triggerVerification($requestId) {
         $client = $this->initClient();
-        $client->verify()->trigger($requestId);
+        return $client->verify()->trigger($requestId);
     }
 
     public function cancelVerification($requestId) {
         $client = $this->initClient();
         $verification = new \Nexmo\Verify\Verification($requestId);
-        $client->verify()->cancel($verification);
+        return $client->verify()->cancel($verification);
     }
 
     /*
@@ -78,7 +77,7 @@ class NexmoManager
     public function checkVerification($requestId, $code) {
         $client = $this->initClient();
         $verification = new \Nexmo\Verify\Verification($requestId);
-        $client->verify()->check($verification, $code);
+        return $client->verify()->check($verification, $code);
     }
 
     /*
@@ -88,12 +87,7 @@ class NexmoManager
     public function searchVerification($requestId) {
         $client = $this->initClient();
         $verification = new \Nexmo\Verify\Verification($requestId);
-        $client->verify()->search($verification);
-
-        echo "Codes checked for verification: " . $verification->getRequestId() . PHP_EOL;
-        foreach($verification->getChecks() as $check){
-            echo $check->getDate()->format('d-m-y') . ' ' . $check->getStatus() . PHP_EOL;
-        }
+        return $client->verify()->search($verification);
     }
 
     protected function initClient()
