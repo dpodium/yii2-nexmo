@@ -51,18 +51,9 @@ class NexmoManager
      * Nexmo's Verify API makes it easy to prove that a user has provided their own phone number during signup, or implement second factor authentication during signin.
      * Return : requestId
      */
-    public function initVerification($number, $brand, $require_type = null, $code_length = null, $next_wait = null) {
+    public function initVerification($number, $brand, $additional = []) {
         $client = $this->initClient();
-        $verification = new \Nexmo\Verify\Verification($number, $brand);
-        if (isset($require_type)) {
-            $verification->setRequireType($require_type);
-        }
-        if (isset($code_length)) {
-            $verification->setCodeLength($code_length);
-        }
-        if (isset($next_wait)) {
-            $verification->setWaitTime($next_wait);
-        }
+        $verification = new \Nexmo\Verify\Verification($number, $brand, $additional);
         return $client->verify()->start($verification);
     }
 
