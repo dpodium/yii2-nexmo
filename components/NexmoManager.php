@@ -92,7 +92,7 @@ class NexmoManager
 
     protected function initClient()
     {
-        $http_client = isset($this->proxy) ? \Http\Adapter\Guzzle6\Client::createWithConfig([
+        $http_client = !empty($this->proxy['host']) ? \Http\Adapter\Guzzle6\Client::createWithConfig([
                 'proxy' => $this->proxy['host'] . ':' . $this->proxy['port'],
             ]) : null;
         return new \Nexmo\Client(new \Nexmo\Client\Credentials\Basic($this->config['api.key'], $this->config['api.secret']), array(), $http_client);
