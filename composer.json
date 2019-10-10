@@ -1,5 +1,5 @@
 {
-  "name": "dpodium/yii2-nexmo",
+  "name": "baha2odeh/yii2-nexmo",
   "description": "Yii2 nexmo is a wrapper for the Nexmo PHP library. Allow yii2 application to use nexmo services.",
   "keywords": ["yii2", "nexmo", "sms"],
   "type": "yii2-extension",
